@@ -22,7 +22,7 @@ def main():
         pcap_file TEXT NOT NULL,   -- Idem
         src_ip TEXT NOT NULL,      
         dst_ip TEXT NOT NULL,      
-        query_name TEXT,           -- nom de domaine demandé
+        query_name TEXT           -- nom de domaine demandé
     );
     """)
 

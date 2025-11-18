@@ -12,15 +12,15 @@ class Surveillance:
 # en construction :
 
   def scan(self):
-    anciens_fichiers = self.a_fichiers
+    anciens_fichiers = self.a_fichiers # prend la liste des fichiers au début
     nouveaux_fichiers = []
-    while True :
-      for fich in os.listdir(self.dossier) :
-        if fich not in anciens_fichiers:
+    while True : # BOUCLE INFINIE
+      for fich in os.listdir(self.dossier) : #regarde tous les fichiers dans le dossier
+        if fich not in anciens_fichiers: # En gros si ca ne trouve pas le fichier, bah il rajoute dans les liste/set
           print(fich)
-          nouveaux_fichiers.append(fich)
-          anciens_fichiers.add(fich)
-      time.sleep(30)
+          nouveaux_fichiers.append(fich) # c'est pour traiter les fichiers en question par un autre programme... faut peut être mettre un return...
+          anciens_fichiers.add(fich)  # C'est pour retester la prochaine boucle avec les nouveaux fichiers
+      time.sleep(30) #j'ai mis 30 sec pour l'instant
           
 
 

@@ -26,7 +26,6 @@ def main():
         dst_ip TEXT NOT NULL,
         dst_port INTEGER,
         protocol TEXT NOT NULL,    -- HTTP... normalement ^^'
-        info TEXT -- pour un commentaire, fait par l'utilisteur s'il veut
     );
     """)
 

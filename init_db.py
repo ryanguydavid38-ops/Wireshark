@@ -37,7 +37,6 @@ def main():
         src_ip TEXT NOT NULL,      
         dst_ip TEXT NOT NULL,      
         query_name TEXT,           -- nom de domaine demandé
-        is_mdns INTEGER            -- 0 = DNS normal, 1 = mDNS (port=5353)
     );
     """)
 

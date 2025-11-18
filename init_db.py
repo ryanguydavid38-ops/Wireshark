@@ -28,11 +28,6 @@ def main():
     );
     """)
 
-    # Création index pour les requêtes
-    cur.execute("CREATE INDEX idx_http_time ON http_logs(timestamp);")
-    cur.execute("CREATE INDEX idx_http_src_ip ON http_logs(src_ip);")
-    cur.execute("CREATE INDEX idx_http_dst_ip ON http_logs(dst_ip);")
-
     # Création de la table DNS / mDNS
     cur.execute("""
     CREATE TABLE dns_logs (
@@ -45,11 +40,6 @@ def main():
         is_mdns INTEGER            -- 0 = DNS normal, 1 = mDNS (port=5353)
     );
     """)
-    
-    # Création idex pour les requêtes
-    cur.execute("CREATE INDEX idx_dns_time ON dns_logs(timestamp);")
-    cur.execute("CREATE INDEX idx_dns_src_ip ON dns_logs(src_ip);")
-    cur.execute("CREATE INDEX idx_dns_qname ON dns_logs(query_name);")
 
     #Ecrit dans le fichier et ferme la co
     conn.commit() 

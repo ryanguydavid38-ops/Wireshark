@@ -7,4 +7,6 @@ class surveillance:
     self.a_fichiers = set(os.listdir(self.dossier))
     
 test = surveillance("/home/ubuntu/Documents/LAN/LOG")
-print(test.a_fichier)
+print(test.dossier)
+print(test.a_fichiers)
+

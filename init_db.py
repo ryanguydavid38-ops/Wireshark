@@ -12,21 +12,7 @@ def main():
     cur = conn.cursor()
 
     # Suppression des tables s'ils existent
-    cur.execute("DROP TABLE IF EXISTS http_logs;")
     cur.execute("DROP TABLE IF EXISTS dns_logs;")
-
-    # Création de la table HTTP
-    cur.execute("""
-    CREATE TABLE http_logs (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        timestamp TEXT NOT NULL,   -- date/heure du paquet
-        pcap_file TEXT NOT NULL,   -- nom du fichier pcapng d'origine
-        src_ip TEXT NOT NULL,
-        src_port INTEGER,
-        dst_ip TEXT NOT NULL,
-        dst_port INTEGER
-    );
-    """)
 
     # Création de la table DNS / mDNS
     cur.execute("""

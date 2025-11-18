@@ -8,10 +8,6 @@ class surveillance:
     self.dossier = Path(ch_dossier) # définit le chemin du dossier sur "dossier"
     self.a_fichiers = set(os.listdir(self.dossier)) # prend les fichiers actuelles dans le dossier du dessus et les listes   
 
-# pour tester, ça fonctionne
-test = surveillance("/home/ubuntu/Documents/LAN/LOG")
-print(test.dossier)
-print(test.a_fichiers)
 
 # en construction :
 
@@ -26,4 +22,11 @@ print(test.a_fichiers)
           anciens_fichiers.append(fich)
       time.sleep(30)
           
-          
+
+
+# pour tester
+test = surveillance("/home/ubuntu/Documents/LAN/LOG")
+print(test.dossier)
+print(test.a_fichiers)
+
+test2 = surveillance

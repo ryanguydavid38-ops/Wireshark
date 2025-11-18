@@ -24,7 +24,7 @@ def main():
         src_ip TEXT NOT NULL,
         src_port INTEGER,
         dst_ip TEXT NOT NULL,
-        dst_port INTEGER,
+        dst_port INTEGER
     );
     """)
 
@@ -46,6 +46,6 @@ def main():
     conn.close() 
     print(f"[i] Base SQLite recréée : {DB_FILE}")
 
+# C'est pour l'execution sur un cmd linux
 if __name__ == "__main__":
     main()
-

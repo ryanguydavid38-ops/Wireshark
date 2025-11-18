@@ -18,7 +18,7 @@ class Surveillance:
       for fich in os.listdir(self.dossier) :
         if fich not in anciens_fichiers:
           print(fich)
-          nouveaux_fichier.append(fich)
+          nouveaux_fichiers.append(fich)
           anciens_fichiers.add(fich)
       time.sleep(30)
           
@@ -26,6 +26,8 @@ class Surveillance:
 
 # pour tester
 test = Surveillance("/home/ubuntu/Documents/LAN/LOG")
+print("Le dossier surveillé:")
 print(test.dossier)
+print("Les fichiers d'origines:")
 print(test.a_fichiers)
 test.scan()

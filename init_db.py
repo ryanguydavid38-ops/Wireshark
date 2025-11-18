@@ -25,7 +25,6 @@ def main():
         src_port INTEGER,
         dst_ip TEXT NOT NULL,
         dst_port INTEGER,
-        protocol TEXT NOT NULL,    -- HTTP... normalement ^^'
     );
     """)
 
